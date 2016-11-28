@@ -9,7 +9,6 @@ info:
  
 app:
   type: paas
-
   resources:
     profile: c1.small
  
@@ -17,10 +16,11 @@ app:
       - 
         interface-name: eth0
         ports: 
-            tcp: [9000]
+            tcp: 
+              - 9000
 
 # Specify runtime and startup
   startup:
     runtime: python 
     runtime-version: 2.7
-target: main.py
+    target: main.py
