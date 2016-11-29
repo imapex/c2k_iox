@@ -190,10 +190,70 @@ Successfully deployed
 
 8. Connect to the console of the running application to verify it has started correctly.  If you connect immediately after starting, you may need to wait while the container boots up completely.  
 
+   ```
+   ioxclient application console c2k_iox 
+   Currently active profile :  c2k_iox
+Command Name: application-console
+Console setup is complete..
+Running command : [ssh -p 2222 -i c2k_iox.pem appconsole@76.92.194.126]
+SSH client is not present on the platform.
+Attempting to connect using native SSH implementation..., press Ctrl+C to exit
+Connecting to appconsole@76.92.194.126:2222 using pem file c2k_iox.pem
+Connected to domain c2k_iox
+Escape character is ^]
+INIT: version 2.88 booting
+mount: permission denied (are you root?)
+bootlogd: ioctl(/dev/pts/1, TIOCCONS): Operation not permitted
+urandom start: failed.
+rm: can't remove '/tmp/cores': Device or resource busy
+rm: can't remove '/tmp': Directory not empty
+dmesg: klogctl: Permission denied
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+INIT: Entering runlevel: 5
+Configuring network interfaces... udhcpc (v1.22.1) started
+Sending discover...
+Sending select for 192.168.1.9...
+Lease of 192.168.1.9 obtained, lease time 86400
+/etc/udhcpc.d/50default: Adding DNS 192.168.10.15
+done.
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+Starting syslogd/klogd: done
+Poky (Yocto Project Reference Distro) 1.7.2 isr800-lxc /dev/tty1
+isr800-lxc login: 2016-11-29 14:35:27,562 - myapp - INFO - Printing CAF ENV VARIABLES
+2016-11-29 14:35:27,568 - myapp - INFO - CAF_APP_PERSISTENT_DIR: /data
+2016-11-29 14:35:27,570 - myapp - INFO - CAF_APP_LOG_DIR: /data/logs
+2016-11-29 14:35:27,573 - myapp - INFO - CAF_APP_CONFIG_FILE: /data/package_config.ini
+2016-11-29 14:35:27,575 - myapp - INFO - CAF_APP_CONFIG_DIR: /data
+2016-11-29 14:35:27,577 - myapp - INFO - CAF_APP_USERNAME: root
+2016-11-29 14:35:27,579 - myapp - INFO - CAF_HOME: /appdir
+2016-11-29 14:35:27,582 - myapp - INFO - CAF_HOME_ABS_PATH: /appdir
+2016-11-29 14:35:27,585 - myapp - INFO - CAF_APP_PATH: /appdir/app
+2016-11-29 14:35:27,587 - myapp - INFO - CAF_MODULES_PATH: /appdir/modules
+2016-11-29 14:35:27,590 - myapp - INFO - CAF_APP_DIR: app
+2016-11-29 14:35:27,594 - myapp - INFO - CAF_MODULES_DIR: modules
+2016-11-29 14:35:27,596 - myapp - INFO - CAF_APP_ID: c2k_iox
+201
+{
+  "bus": {
+    "id": 10, 
+    "last_checkin": "20161129-143531", 
+    "last_location": "GPS Temporarily Unavailable", 
+    "name": "bus0648", 
+    "route": "Pulaski-87th-95th", 
+    "status": "", 
+    "uri": "http://imapex-c2k-c2klistener.green.browndogtech.com/api/v1.0/busses/bus0648"
+  }
+}
+200
+{
+  "bus": {
+    "id": 10, 
+    "last_checkin": "2016-11-29T14:30:11.322433", 
+    "last_location": "GPS Temporarily Unavailable", 
+    "name": "bus0648", 
+    "route": "Pulaski-87th-95th", 
+    "status": "", 
+    "uri": "http://imapex-c2k-c2klistener.green.browndogtech.com/api/v1.0/busses/bus0648"
+     }
+}
     ```
-    ioxclient application console c2k_iox 
-    
-    # Sample Output
-   
-    ```
-	
