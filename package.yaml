@@ -1,0 +1,26 @@
+descriptor-schema-version: 2.0
+ 
+info:
+  name: "C2K_IOX"
+  description: "Cisco Kiddie Kounter - IoX app to provide bus status and count the kids on the bus"
+  version: "1.02"
+  author-link: "http://imapex.io"
+  author-name: "imapex"
+ 
+app:
+  type: paas
+  resources:
+    profile: c1.small
+ 
+    network:
+      - 
+        interface-name: eth0
+        ports: 
+            tcp: 
+              - 9000
+
+# Specify runtime and startup
+  startup:
+    runtime: python 
+    runtime-version: 2.7
+    target: main.py
