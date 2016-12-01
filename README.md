@@ -6,6 +6,8 @@ Cisco Kiddie Kounter (C2K) is a sample demonstration application that illustrate
 
 The initial problem to be solved is to to count the kids on the school bus.  Additional capabilities include tracking school bus location and notifying school administrators and parents.  No more kids left sleeping on the bus!
 
+![](c2k-diagram.png)
+
 The total application consists of the following services:
 
 * [c2k_demo](https://github.com/imapex/c2k_demo) - Full Demo Application Setup and Details
@@ -15,7 +17,7 @@ The total application consists of the following services:
 
 # c2k_iox 
 
-This repository provides the code and details for the Cisco IOx Application that monitors GPS Location and WLAN clients on a Cisco 829 IoX Router in a school bus and periodically reports status to the C2K Listener.
+This repository provides the code and details for the Cisco IOx Application that monitors GPS Location and WLAN clients on a Cisco C819HG-4G-G-K9 IoX Router in a school bus and periodically reports status to the C2K Listener.
 
 ### Table of Contents 
 
